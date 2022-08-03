@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: cpu-gitops-resize
+  namespace: default
+spec:
+  containers:
+  - name: cpu-gitops-resize
+    image: beekman9527/cpumemload:latest
+    env:
+    - name: RUN_TYPE
+      value: "cpu"
+      name: CPU_PERCENT
+      value: "200"
+    resources:
+      requests:
+        memory: "64Mi"
+        cpu: "10m"
+      limits:
+        memory: "128Mi"
+        cpu: "15m"
