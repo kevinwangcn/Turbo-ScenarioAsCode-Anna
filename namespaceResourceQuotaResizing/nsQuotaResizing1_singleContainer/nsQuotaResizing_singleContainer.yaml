@@ -10,7 +10,7 @@ metadata:
   namespace: quotatest-single-container
 spec:
   hard:
-    limits.cpu: "100m"
+    limits.cpu: "10m"
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -33,7 +33,7 @@ spec:
           image: beekman9527/cpumemload:latest
           resources:
             limits:
-              cpu: "100m"
+              cpu: "10m"
           env:
             - name: RUN_TYPE
               value: cpu
