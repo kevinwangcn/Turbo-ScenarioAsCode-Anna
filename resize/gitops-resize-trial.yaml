@@ -1,0 +1,40 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: resize-gitops
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: resize-gitops
+  template:
+    metadata:
+      name: resize-gitops
+      labels:
+        app: resize-gitops
+    spec:
+      containers:
+      - name: resize-gitops-1
+        image: beekman9527/cpumemload:latest
+        resources:
+          limits:
+            cpu: "1"
+            memory: "2048Mi"
+          requests:
+            cpu: "0.5"
+            memory: "256Mi"
+        env:
+        - name: RUN_TYPE
+          value: "cpu"
+        - name: CPU_PERCENT
+          value: "85"
+      - name: resize-gitops-2
+        image: beekman9527/cpumemload:latest
+        resources:
+          limits:
+            cpu: "1"
+            memory: "2048Mi"
+          requests:
+            cpu: "0.5"
+            memory: "256Mi"
