@@ -33,9 +33,9 @@ spec:
           image: beekman9527/cpumemload:latest
           resources:
             limits:
-              cpu: "10m"
+              cpu: "100m"
           env:
             - name: RUN_TYPE
               value: cpu
             - name: CPU_PERCENT
-              value: "100"
+              value: "200"
