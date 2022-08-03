@@ -20,17 +20,17 @@ spec:
         - name: RUN_TYPE
           value: cpu
         - name: CPU_PERCENT
-          value: "100"
+          value: "200"
         image: beekman9527/cpumemload:latest
         imagePullPolicy: Always
         name: beekman-1
         resources:
           limits:
-            cpu: "3"
-            memory: 12Mi
+            cpu: "15m"
+            memory: "128Mi"
           requests:
             cpu: 10m
-            memory: 11Mi
+            memory: 64Mi
         terminationMessagePath: /dev/termination-log
         terminationMessagePolicy: File
       dnsPolicy: ClusterFirst
