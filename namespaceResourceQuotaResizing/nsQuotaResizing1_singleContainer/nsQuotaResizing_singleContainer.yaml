@@ -33,7 +33,7 @@ spec:
           image: beekman9527/cpumemload:latest
           resources:
             limits:
-              cpu: "100m"
+              cpu: "105m"
           env:
             - name: RUN_TYPE
               value: cpu
