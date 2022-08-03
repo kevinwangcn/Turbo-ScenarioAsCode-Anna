@@ -40,4 +40,4 @@ spec:
             - name: RUN_TYPE
               value: cpu
             - name: CPU_PERCENT
-              value: "100"
+              value: "200"
