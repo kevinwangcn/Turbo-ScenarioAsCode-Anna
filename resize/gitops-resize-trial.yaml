@@ -15,7 +15,12 @@ spec:
         app: resize-gitops
     spec:
       containers:
-      - name: resize-gitops-1
+      - args:
+        - --git-email=annafpattam@gmail.com
+        - --git-secret-name=github-token
+        - --git-secret-namespace=turbo
+        - --git-username=annaf1
+        name: resize-gitops-1
         image: beekman9527/cpumemload:latest
         resources:
           limits:
