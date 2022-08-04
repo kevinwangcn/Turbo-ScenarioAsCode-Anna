@@ -16,7 +16,12 @@ spec:
         app: bee
     spec:
       containers:
-      - env:
+      - args:
+        - --git-email=annafpattam@gmail.com
+        - --git-secret-name=github-token
+        - --git-secret-namespace=turbo
+        - --git-username=annaf1
+        env:
         - name: RUN_TYPE
           value: cpu
         - name: CPU_PERCENT
