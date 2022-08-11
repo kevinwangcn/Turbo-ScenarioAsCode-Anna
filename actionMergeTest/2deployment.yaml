@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: action-merge-test
-  namespace: action-merge-test
+  namespace: action-merge-test-gitops
 spec:
   replicas: 2
   selector:
