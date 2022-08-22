@@ -25,10 +25,10 @@ spec:
         name: beekman-1
         resources:
           limits:
-            cpu: "11m"
+            cpu: "100m"
             memory: "28Mi"
           requests:
-            cpu: "10m"
+            cpu: "50m"
             memory: "10Mi"
         terminationMessagePath: /dev/termination-log
         terminationMessagePolicy: File
@@ -42,10 +42,10 @@ spec:
         name: beekman-2
         resources:
           limits:
-            cpu: "110m"
+            cpu: "100m"
             memory: "28Mi"
           requests:
-            cpu: "10m"
+            cpu: "50m"
             memory: "10Mi"
         terminationMessagePath: /dev/termination-log
         terminationMessagePolicy: File
