@@ -17,7 +17,7 @@ spec:
       containers:
       - env:
         - name: RUN_TYPE
-          value: "cpu"
+          value: cpu
         - name: CPU_PERCENT
           value: "95"
         image: beekman9527/cpumemload:latest
